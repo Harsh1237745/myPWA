@@ -1,0 +1,246 @@
+/* The background layout for the section where the prodcuts are displayed */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7; 
+}
+
+/* Side section code */
+.main {
+    display: flex;
+}
+
+/* Alignment for text inside the filter & sort sidebar*/
+.side {
+    text-align: center;
+}
+
+/* Code for the filter and sort section*/
+.side {
+    width: 450px;
+    background-color: #d0cdcd; 
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(7, 167, 26, 0.05);
+    overflow-y: auto;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Code for the filter and sort section title*/
+.side-title {
+    color: #000000;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Sort By and Filter by text color */
+.sort-section h4, .filter-section h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 1em;
+}
+
+/* Color of the text inside the buttons and button section */
+.sort, .filter {
+    display: block; 
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff; 
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Animation for clicking on the other buttons */
+.sort:hover, .filter:hover {
+    background-color: #e0e0e0;
+}
+
+/* Code for the button the user presses when it chooses what to filter or sort, this shows the active button for it */
+.sort:not([data-sort="default"]).active, 
+.filter:not([data-filter="all"]).active {
+    background: linear-gradient(145deg, #1A73E8, #1A73E8);
+    color: white;
+    box-shadow: 0 4px 10px rgba(122, 32, 255, 0.3);
+}
+
+/* This shows the color of the button which is currently in, as a starting section*/
+.sort[data-sort="default"].active,
+.filter[data-filter="all"].active {
+    background-color: #9a9292;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* This is the section for the product display*/
+.product-content-area {
+    flex-grow: 1; 
+    padding: 20px 40px; 
+    max-width: calc(100% - 280px);
+}
+        
+/* Section for the product display for showing 4 products in one row */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    padding-top: 20px;
+}
+
+/* Product displaying styling in the website for shop now */
+.product-card {
+    background-color: white;
+    padding: 20px 20px 15px 20px;
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 400px; 
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Hover effect for the product display card*/
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.product-card-image-wrapper {
+    height: 180px; 
+    margin: 0 auto 15px auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Product image styling*/
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 180px; 
+    width: auto; 
+    object-fit: contain;
+}
+
+/* Styling for the product and price text */
+.product-card h3 {
+    margin: 5px 0 2px;
+    font-size: 1.2em; 
+    font-weight: 700;
+    color: #333;
+}
+
+/* Styling for the product price inside the product card */
+.product-price {
+    font-size: 1.5em; 
+    font-weight: 800; 
+    color: #1A73E8; 
+    margin-bottom: 10px;
+}
+
+/* Styling for the product description inside the product card */
+.product-description {
+    color: #777;
+    font-size: 0.85em;
+    margin-bottom: 10px;
+    flex-grow: 1; 
+}
+        
+/* Stock Button Styling section */
+.stock-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #1A73E8;
+    background-color: white;
+    color: #1A73E8;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto; 
+}
+
+/* Stock Button Styling section and its effect */
+.stock-btn:hover {
+    background-color: #1A73E8;
+    color: white;
+    box-shadow: 0 4px 10px rgba(122, 32, 255, 0.3);
+}
+
+/* Stock Popup styling section */
+.stock-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Shows the stock left; popup section*/
+.stock-alert.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Handles the spacing of the searchbar*/
+.search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-bottom: 20px; 
+    padding: 0 10px; 
+}
+
+/* Handles the styling for the searchbar input */
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1em;
+    box-sizing: border-box; 
+}
+
+/* Handles the styling for the Search button below the search input */
+.search-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background-color: #1A73E8;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Color of the search button */
+.search-btn:hover {
+    background-color: #1A73E8; 
+}

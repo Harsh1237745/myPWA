@@ -1,0 +1,326 @@
+/* Home Section for CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Banner section */
+.banner{
+    width: 100%;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 1s ease-in-out; 
+}
+
+.navbar{
+    width: 85%;
+    margin : auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2; 
+}
+
+/* logo section */
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+/* Header section */
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #1A73E8;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/* Text section inside the animated image*/
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2; 
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/* Button section in the index page*/
+.button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 50px;     
+    font-weight: bold;
+    border: 2px solid #1A73E8;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;               
+    height: 100%;
+    background: #1A73E8;      
+    border-radius: 50px;     
+    z-index: -1;
+    transition: 0.4s;       
+}
+
+.button:hover span {
+    width: 100%;             
+}
+
+.button:hover {
+    color: white;
+    border-color: #1A73E8;
+}
+
+
+/* About Us Section banner for CSS */
+.about-banner {
+    width: 100%;
+    height: 55vh; 
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("Images/home4.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* About Us mission section for info*/
+.mission-section {
+    background-color: #e7e7e7; 
+    padding: 50px 10%;
+}
+
+.mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.mission-text {
+    flex: 2;
+}
+
+.mission-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.mission-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.mission-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mission-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px; 
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* About Us vision section for info */
+.vision-section {
+    background-color: #e7e7e7; 
+    padding: 50px 10%;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+.vision-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; 
+    order: 1; 
+}
+
+.vision-image img {
+    width: 100%;
+    max-width: 400px; 
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 20px; 
+}
+
+.vision-text {
+    flex: 2;
+    padding-left: 0; 
+    order: 2; 
+}
+
+.vision-text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.vision-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+ /* Animated section for the banner in aboutus*/
+.about-banner {
+    width: 100%;
+    height: 55vh;
+    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("Images/contact1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+}
+
+/* Contact Page for the webpage*/
+.content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    z-index: 2;
+}
+
+.contact-banner {
+    width: 100%;
+    height: 40vh; 
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("Images/contact1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Contact Section*/
+.contact-section {
+    padding: 60px 0;
+    background-color: #e7e7e7;
+}
+
+.contact-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; 
+}
+
+/* Contact section for sumbit the thing for getting a message to the people from the contact form */
+.message, .inform {
+    flex-basis: 48%; 
+    min-width: 300px; 
+}
+
+.message h2, .inform h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Contact Form for the people to fill in */
+.message form input[type="text"],
+.message form input[type="email"],
+.message form select,
+.message form textarea { 
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.message form textarea { 
+    resize: vertical;
+}
+
+.message form .button {
+    color: #333;
+}
+
+/* Contact Information and other resources*/
+.support {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 4px solid #1A73E8; 
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.support h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1A73E8;
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+}
+
+.about-banner {
+    z-index: 1;
+}
